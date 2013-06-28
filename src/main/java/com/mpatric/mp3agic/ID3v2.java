@@ -32,6 +32,10 @@ public interface ID3v2 extends ID3v1 {
 	String getUrl();
 	void setUrl(String url);
 
+	String getSubTitle();
+	String getReleaseTime();
+	String getPodcastUrl();
+	
 	String getPartOfSet();
 	void setPartOfSet(String partOfSet);
 
