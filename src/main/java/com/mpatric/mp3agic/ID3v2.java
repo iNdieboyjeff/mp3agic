@@ -34,6 +34,7 @@ public interface ID3v2 extends ID3v1 {
 
 	String getSubTitle();
 	String getReleaseTime();
+	void setReleaseTime(String title);
 	String getPodcastUrl();
 	
 	String getPartOfSet();
@@ -57,6 +58,15 @@ public interface ID3v2 extends ID3v1 {
 	
 	String getItunesComment();
 	void setItunesComment(String itunesComment);
+	
+	/**
+	 * Set genre from text.
+	 * This method behaves different depending on the ID3 version.
+	 * Prior to ID3v2.4, the provided text must match a id3v1 genre description.
+	 * With ID3v2.4, the genre is written as free text.
+	 * @param text genre string
+	 */
+	public void setGenreDescription(String text);
 	
 	int getDataLength();
 	int getLength();
